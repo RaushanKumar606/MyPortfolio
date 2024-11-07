@@ -1,0 +1,22 @@
+.icon_up {
+    transition: all 0.5s ease; 
+  }
+  
+  .icon_up:hover {
+    background-color: #2d40b9,; 
+    transform: scale(1.1) rotate(360deg);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5)
+  }
+
+  
+  /* HOME  PAGE  */
+
+  .hover-image {
+    transition: all 0.3s ease; 
+  }
+  
+  .hover-image:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3); 
+  }
+  
+
