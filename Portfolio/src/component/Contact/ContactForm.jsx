@@ -17,17 +17,34 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(``,{
-      method:'POST',
-      headers:{
-        'Contact-Type':'application/json'
+    try {
+      const response = await fetch("http://localhost:8000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (!response.ok) {
+        const errorText = await response.text(); // Capture error response body
+        throw new Error(`Failed to send contact message: ${errorText}`);
       }
-    })
-  if(response.ok){
-    const contact = await response.json()
-    setFormData(contact)
-  }
+  
+      const contact = await response.json();
+      console.log("Success:", contact.message);
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        comments: '',
+      });
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
+  
   return (
     
     <div className="row p-5 justify-content-center">
