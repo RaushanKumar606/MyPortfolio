@@ -17,8 +17,16 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    console.log(formData); 
+    const response = await fetch(``,{
+      method:'POST',
+      headers:{
+        'Contact-Type':'application/json'
+      }
+    })
+  if(response.ok){
+    const contact = await response.json()
+    setFormData(contact)
+  }
   };
   return (
     
