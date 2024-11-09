@@ -21,6 +21,9 @@ const projectSchema = new mongoose.Schema({
         required: true,
         trim: true,
     },
+    demoLink:{
+        type:String,
+    }
 }, {
     timestamps: true, // This will add createdAt and updatedAt timestamps
 });

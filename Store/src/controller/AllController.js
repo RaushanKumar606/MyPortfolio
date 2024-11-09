@@ -80,8 +80,8 @@ const getAllEducation = async (req, res, next) => {
 
 const saveContact = async (req, res, next) => {
     try {
-        const { username, email, phone, comment } = req.body;
-        const contact = new Contact({ username, email, phone, comment });
+        const { firstName,lastName, email, phone, comment } = req.body;
+        const contact = new Contact({ firstName,lastName, email, phone, comment });
         await contact.save();
         res.status(201).send({ message: 'Contact saved successfully!' });
     } catch (error) {
