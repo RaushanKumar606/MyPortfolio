@@ -104,7 +104,7 @@ const Home = () => {
           </div>
           <div className="col p-5">
             <img
-              src="/Image/raushan.jpg"
+              src="/Image/rkr.jpg"
               alt=""
               className="hover-image"
               style={{

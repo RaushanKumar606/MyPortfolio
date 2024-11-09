@@ -3,7 +3,7 @@ const About = ()=>{
         <div className="container">
             <div className="row mt-5">
                 <div className="col mt-5">
-                    <img src="/Image/raushan.jpg" alt=""
+                    <img src="/Image/about.jpg" alt=""
                       style={{
                         height: "400px",
                         width: "300px",

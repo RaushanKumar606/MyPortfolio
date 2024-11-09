@@ -7,7 +7,25 @@ body, html, #root {
     padding: 0;
     color: white; /* Sets text color to white for contrast */
   }
+
+
+  /* NavBar css */
+
+  .text-responsive {
+    font-size: 1rem; 
   
+   
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+      margin-left: 100px;
+    }
+  
+    
+    @media (min-width: 1246px) {
+      font-size: 2rem;
+      margin-left: 100px;
+    }
+  }
 
   /* App.css */
 
