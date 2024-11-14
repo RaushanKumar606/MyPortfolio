@@ -3,6 +3,8 @@ const Navbar = () => {
   return (
     <nav
       className="navbar navbar-expand-lg p-3"
+      data-aos="fade-down"
+      data-aos-duration="1000"
       style={{
         backgroundColor: "#003366",
         borderRadius: "10px",
@@ -16,7 +18,7 @@ const Navbar = () => {
     >
       <div className="container-fluid">
       <h1 className="navbar-brand text-white gradient-text mb-0 .text-responsive">
-        <a href="  /">  Portfolio</a>
+        <a href="  /"> <span>R</span>aushan Singh</a>
         </h1>
    
         <button
@@ -40,32 +42,33 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white active" href="">
+              <a className="nav-link text-white active" href="#about">
                 About
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white active" href="">
+              <a className="nav-link text-white active" href="#service">
                 Service
               </a>
             </li>
+          
             <li className="nav-item">
-              <a className="nav-link text-white active" href="">
-                Project
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-white active" href="">
+              <a className="nav-link text-white active" href="#education">
                 Education
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white active" href="">
+              <a className="nav-link text-white active" href="#skill">
                 Skill
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white active" href="">
+              <a className="nav-link text-white active" href="#project">
+                Project
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-white active" href="#contact">
                 Contact
               </a>
             </li>

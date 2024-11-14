@@ -23,7 +23,7 @@ const Project = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container"   id="project">
       <div className="row mt-5">
       <h1 className="text-center gradient-text">
           <span>My</span> Latest Project
@@ -35,8 +35,9 @@ const Project = () => {
       </div>
       <div className="row mt-4">
         {project.map((project) => (
-          <div key={project.id} className="col-md-4 mb-4">
-            <div className="card shadow-sm p-3 hover-card">
+          <div key={project.id} className="col-md-4 mb-4" data-aos="flip-right"  data-aos-duration="1000">
+            <div className="card shadow-sm p-3 hover-card"
+            >
               <h3 className="card-title">{project.title}</h3>
               <p className="card-text">{project.description}</p>
               <div className="buttons-container">

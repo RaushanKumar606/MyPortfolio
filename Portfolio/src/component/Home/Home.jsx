@@ -1,16 +1,35 @@
+import { useEffect ,useRef} from "react";
+import Typed from "typed.js";
+
 const Home = () => {
+  const typedRef = useRef(null);
+  useEffect(()=>{
+const options = {
+  strings: ["Full Stack Developer & Software Developer"],
+  typesSpeed:50,
+  backSpeed:50,
+  loop:true
+
+}
+const typed = new Typed(typedRef.current,options)
+return()=>{
+  typed.destroy()
+}
+  },[]);
+
   return (
     <div>
       <div
         className="container"
-        //  style={{borderRadius:'5%', border: "2px solid red"}}
+        id="home"
       >
         <div className="row mt-5">
-          <div className="col p-5 mt-5">
-            <h1 className="mt-10">Raushan Kumar Singh</h1>
-            <h3>
-              And I&apos;m a{" "}
-              <span>Full Stack Developer & Software Developer</span>
+          <div className="col p-5 mt-5"
+          data-aos="fade-up-right"
+          data-aos-duration="1000">
+            <h1 className="mt-10" >Raushan Kumar Singh</h1>
+            <h3 ref={typedRef}>
+             I Am Into
             </h3>
             <p>
               Enthusiastic and dedicated computer science student with a passion
@@ -102,7 +121,10 @@ const Home = () => {
               </a>
             </div>
           </div>
-          <div className="col p-5">
+          <div className="col p-5"
+          data-aos="fade-up-left"
+      data-aos-duration="1000"
+          >
             <img
               src="/Image/rkr.jpg"
               alt=""

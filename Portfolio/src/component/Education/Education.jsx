@@ -21,7 +21,7 @@ const Education = () => {
    }
    
   return (
-    <div className="container">
+    <div className="container" id="education">
       <div className="row mt-5">
       <h1 className="text-center gradient-text">
           <span>My</span> Education
@@ -29,7 +29,10 @@ const Education = () => {
       </div>
       <div className="row mt-4">
         {education.map((item) => (
-          <div key={item.id} className="col-md-12 mb-4">
+          <div key={item.id} className="col-md-12 mb-4"
+          data-aos="zoom-in"
+           data-aos-duration="1000"
+          >
             <div className="card shadow-sm p-3 hover-card">
             <h3 className="card-title">{item.school}</h3>
               <h3 className="card-title">{item.degree}</h3>

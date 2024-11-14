@@ -1,4 +1,5 @@
 
+import { useEffect } from 'react'
 import './App.css'
 import { About } from './component/About/About'
 import ContactForm from './component/Contact/ContactForm'
@@ -9,8 +10,12 @@ import Navbar from './component/Navbar/Navbar'
 import { Project } from './component/Project/Project'
 import { Service } from './component/Service/Service'
 import { Skill } from './component/Skill/Skill'
-
+import Aos from "aos"
+import "aos/dist/aos.css"
 function App() {
+  useEffect(()=>{
+Aos.init(); 
+  },[])
 
   return (
     <>
@@ -18,9 +23,9 @@ function App() {
     <Home/>
      <About/>
      <Service/>
-     <Project/>
      <Education/>
      <Skill/>
+     <Project/>
     <ContactForm/> 
     <Footer/>
     </>

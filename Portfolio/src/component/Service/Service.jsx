@@ -26,7 +26,7 @@ const myservice  = async()=>{
 
 
 return (
-  <div className="container">
+  <div className="container"   id="service">
     <div className="row mt-5">
     <h1 className="text-center gradient-text">
         <span>My</span> Services
@@ -34,7 +34,7 @@ return (
     </div>
     <div className="row mt-4">
       {services.map((service) => (
-        <div key={service.id} className="col-md-4 mb-4">
+        <div key={service.id} className="col-md-4 mb-4" data-aos="fade-up-right"data-aos-duration="1000">
           <div className="card shadow-sm p-3 hover-card">
             <h3 className="card-title">{service.title}</h3>
             <p className="card-text">{service.description}</p>

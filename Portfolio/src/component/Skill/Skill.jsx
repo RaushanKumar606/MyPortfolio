@@ -27,18 +27,23 @@ const Skill = () => {
 
 
   return (
-    <div className="container">
+    <div className="container"   id="skill">
       <div className="row mt-5">
       <h1 className="text-center gradient-text">
   <span >Skills</span> & <span >Abilities</span>
 </h1>
 
       </div>
-      <div className="row mt-4">
+      <div className="row mt-4"
+      >
         {skill.map((skill)=>{
           const {id,skillName}=skill;
           return(
-            <div key={id} className="col-md-4 mb-4">
+            <div key={id} className="col-md-4 mb-4"
+            data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000"
+            >
                
                <div className="card shadow-sm p-3 hover-card">
                <h3 className="card-title">{skillName}</h3>
