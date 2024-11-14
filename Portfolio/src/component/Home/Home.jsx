@@ -5,7 +5,7 @@ const Home = () => {
   const typedRef = useRef(null);
   useEffect(()=>{
 const options = {
-  strings: ["Full Stack Developer & Software Developer"],
+  strings: ["Full Stack Developer "],
   typesSpeed:50,
   backSpeed:50,
   loop:true
@@ -20,7 +20,7 @@ return()=>{
   return (
     <div>
       <div
-        className="container"
+        className="container " 
         id="home"
       >
         <div className="row mt-5">
@@ -32,11 +32,11 @@ return()=>{
              I Am Into
             </h3>
             <p>
-              Enthusiastic and dedicated computer science student with a passion
+              Enthusiastic and dedicated computer science student with a passion <br />
               for technology and innovation. Currently pursuing a
-              Bachelor&apos;s degree in Computer Engineering, and any other
-              relevant role that allows me to utilize my skills in programming,
-              problem-solving, and software design to develop software.
+              Bachelor&apos;s degree<br />in Computer Engineering, and any other
+              relevant role that allows me  <br />to utilize my skills in programming,
+              problem-solving, and software <br /> design to develop software.
             </p>
 
             <div className="icon_item d-flex justify-content-center align-items-center gap-3 mb-5 ">
@@ -121,7 +121,10 @@ return()=>{
               </a>
             </div>
           </div>
-          <div className="col p-5"
+
+          {/* IMAGE setup */}
+
+          <div className="col-4 p-5 mt-5"
           data-aos="fade-up-left"
       data-aos-duration="1000"
           >
