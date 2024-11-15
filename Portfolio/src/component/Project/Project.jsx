@@ -5,7 +5,6 @@ const Project = () => {
 
   useEffect(() => {
     myproject();
-  
   }, []);
 
   const myproject = async () => {
@@ -23,20 +22,32 @@ const Project = () => {
   };
 
   return (
-    <div className="container"   id="project">
+    <div className="container" id="project">
       <div className="row mt-5">
-      <h1 className="text-center gradient-text">
+        <h1 className="text-center gradient-text">
           <span>My</span> Latest Project
         </h1>
-{/* 
+        {/* 
         <h1 className="text-center gradient-text hover-effect">
       <span className="hover-char"></span>My <span className="hover-char">Latest Project</span>
     </h1> */}
       </div>
       <div className="row mt-4">
         {project.map((project) => (
-          <div key={project.id} className="col-md-4 mb-4" data-aos="flip-right"  data-aos-duration="1000">
-            <div className="card shadow-sm p-3 hover-card"
+          <div
+            key={project.id}
+            className="col-md-4 mb-4"
+            data-aos="flip-right"
+            data-aos-duration="1000"
+          >
+            <div
+              className="card shadow-sm p-3 hover-card"
+              style={{
+                backgroundImage: `url(${project.Icone})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
             >
               <h3 className="card-title">{project.title}</h3>
               <p className="card-text">{project.description}</p>
