@@ -1,30 +1,9 @@
-// const Contact = require('../model/ContactModel');
-// const Education = require('../model/educationModel')
-// const MyProject = require('../model/ProjectModle')
-// const Skill = require('../model/skill.model')
-// const Service = require('../model/ServiceModel')
-
-
-
 
 const Contact = require('../model/ContactModel');
 const Education = require('../model/educationModel');
 const MyProject = require('../model/ProjectModle');
 const Skill = require('../model/skill.model');
 const Service = require('../model/ServiceModel');
-
-
-
-// const saveSkill = async (req, res, next) => {
-//   try {
-//     const { skillName } = req.body;
-//     const addSkill = new Skill ({skillName });
-//     await addSkill.save();
-//     res.status(201).send({ message: 'Project  saved successfully!' });
-//   } catch (error) {
-//     res.status(400).send({ error: error.message });
-//   }
-// };
 
 
 const getAllSkills = async (req, res, next) => {
@@ -36,16 +15,7 @@ const getAllSkills = async (req, res, next) => {
   }
 };
 
-// const saveProject = async (req, res, next) => {
-//   try {
-//     const { username, title, image, description } = req.body;
-//     const project = new MyProject({  username, title, image, description });
-//     await project.save();
-//     res.status(201).send({ message: 'Project  saved successfully!' });
-//   } catch (error) {
-//     res.status(400).send({ error: error.message });
-//   }
-// };
+
 
 
 const getAllProjects = async (req, res, next) => {
@@ -58,16 +28,7 @@ const getAllProjects = async (req, res, next) => {
 };
 
 
-// const saveEducation= async(req,res,next)=>{
-//  try {
-//     const {school,degree,field,start_date,end_date,grade} = req.body
-//     const education = new Education({ school,degree,field,start_date,end_date,grade});
-//     await education.save();
-//     res.status(201).send({ message: 'Education  saved successfully!' });
-//  } catch (error) {
-    
-//  }
-// }
+
 
 const getAllEducation = async (req, res, next) => {
   try {
@@ -90,18 +51,7 @@ const saveContact = async (req, res, next) => {
 };
 
 
-// const saveService = async (req, res, next) => {
-//   try {
-//       const {title,description} = req.body;
-//       const service = new Service({title,description});
-//       await service.save();
-//       res.status(201).send({ message: 'service saved successfully!' });
-//   } catch (error) {
-//       res.status(400).send({ error: error.message });
-//   }
-// };
 
-// Get All Services
 const getAllServices = async (req, res, next) => {
   try {
     const services = await Service.find(); // Fetch all services
@@ -113,10 +63,7 @@ const getAllServices = async (req, res, next) => {
 
 
 
- module.exports = { 
-saveContact,
-// saveEducation,saveProject,saveSkill,saveService
- };
+
 
 
 

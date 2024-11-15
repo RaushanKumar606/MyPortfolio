@@ -12,6 +12,9 @@ const educationSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
+  Image:{
+ type:String
+  },
   field: {  // Corrected spelling from 'fidel'
     type: String,
     required: true,

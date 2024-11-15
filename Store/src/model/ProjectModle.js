@@ -9,10 +9,10 @@ const projectSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
-        unique: true, // Ensure titles are unique
-        trim: true,   // Trim whitespace
+        unique: true, 
+        trim: true,   
     },
-    image: {
+    Icone: {
         type: String,
         // required: true,
     },
