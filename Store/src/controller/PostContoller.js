@@ -61,21 +61,15 @@ const saveProject = async (req, res, next) => {
     if (!req.files || !req.files.Icone) {
       throw new Error("Icone file is required");
     }
-
-    // Access the Icone file details
     const IconeFile = req.files.Icone[0];
     const IconeType = IconeFile.mimetype.split('/').pop();
     const IconeFilename = IconeFile.filename;
      IconeFilePath = path.resolve(__dirname, '../../public/data/upload', IconeFilename);
-
-   
      Icone = await cloudinary.uploader.upload(IconeFilePath, {
       public_id: IconeFilename,
       folder: 'book_Covers',
       format: IconeType,
     });
-
-     
     const project = new MyProject({
       username,
       title,
@@ -85,7 +79,7 @@ const saveProject = async (req, res, next) => {
     });
 
     await project.save();
-    res.status(201).send({ message: 'Project saved successfully!' ,Icone:Icone});
+    // res.status(201).send({ message: 'Project saved successfully!' ,Icone:Icone});
   } catch (error) {
     console.error('Error saving project:', error);
     res.status(400).send({ error: error.message });
@@ -103,31 +97,69 @@ const saveProject = async (req, res, next) => {
 }
 };
 
+// education logic
 
 
+const saveEducation = async (req, res, next) => {
+  let ImageFilePath = null; // Initialize to null
+  try {
+    const { school, degree, field, start_date, end_date, grade } = req.body;
 
-// const saveProject = async (req, res, next) => {
-//   try {
-//     const { username, title, description,image } = req.body;
-//     const project = new MyProject({  username, title, image, description ,image});
-//     await project.save();
-//     res.status(201).send({ message: 'Project  saved successfully!' });
-//   } catch (error) {
-//     res.status(400).send({ error: error.message });
-//   }
-// };
+    // Check if the Icone file is provided
+    if (!req.files || !req.files.Image) {
+      throw new Error("Icone file is required");
+    }
 
-const saveEducation= async(req,res,next)=>{
- try {
-    const {school,degree,field,start_date,end_date,grade,image} = req.body
-    const education = new Education({ school,degree,field,start_date,end_date,grade,image});
+    const ImageFile = req.files.Image[0];
+    const ImageType = ImageFile.mimetype.split('/').pop();
+    const ImageFilename = ImageFile.filename;
+
+    // Resolve the file path
+    ImageFilePath = path.resolve(__dirname, '../../public/data/upload', ImageFilename);
+
+    // Upload the file to Cloudinary
+    const Image = await cloudinary.uploader.upload(ImageFilePath, {
+      public_id: ImageFilename,
+      folder: 'book_Covers',
+      format: ImageType,
+    });
+
+    // Save the education data
+    const education = new Education({
+      school,
+      degree,
+      field,
+      start_date,
+      end_date,
+      grade,
+      Image: Image.secure_url,
+    });
+
     await education.save();
-    res.status(201).send({ message: 'Education  saved successfully!' });
- } catch (error) {
-  
- }
-}
+    res.status(201).send({ message: 'Education saved successfully!' });
+  } catch (error) {
+    console.error("Error saving education:", error);
+    res.status(500).send({ error: error.message || "An error occurred" });
+  } finally {
+    try {
+      if (ImageFilePath) {
+        await fs.promises.unlink(ImageFilePath);
+        console.log("Icone file deleted successfully");
+      }
+    } catch (error) {
+      console.error("Error deleting files:", error);
+    }
+  }
+};
 
+
+
+
+
+
+
+
+//   service logic
 const saveService = async (req, res, next) => {
   try {
       const {title,description,image} = req.body;

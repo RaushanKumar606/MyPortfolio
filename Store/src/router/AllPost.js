@@ -19,10 +19,12 @@ router.route('/Myproject').post(upload.fields([
     { name: 'Icone', maxCount: 2 }
 ]), AllPost.saveProject);
 
-
+router.route('/Myeducation').post(upload.fields([
+    { name: 'Image', maxCount: 2 }
+]), AllPost.saveEducation);
 
 // router.route('/Myskill').post(AllPost.saveSkill);
-router.route('/Myeducation').post(AllPost.saveEducation);
+// router.route('/Myeducation').post(AllPost.saveEducation);
 // router.route('/Myproject').post(AllPost.saveProject);
 router.route('/service').post(AllPost.saveService);
 

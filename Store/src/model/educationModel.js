@@ -15,13 +15,13 @@ const educationSchema = new mongoose.Schema({
   Image:{
  type:String
   },
-  field: {  // Corrected spelling from 'fidel'
+  field: {  
     type: String,
     required: true,
   },
   start_date: {
     type: Date,  // Changed to Date for full date support
-    required: true,
+  
   },
   end_date: {
     type: Date,  // Changed to Date for full date support
