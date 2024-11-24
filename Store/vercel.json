@@ -1,3 +1,17 @@
 {
-    "cleanUrls": true
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/java"
+    }
+  ],
+  "routes": [
+    
+    {
+      "src": "/api(.*)",
+      "dest": "index.js"
+    }
+  ],
+  "cleanUrls": true
+}
