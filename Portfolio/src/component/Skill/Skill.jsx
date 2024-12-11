@@ -1,5 +1,5 @@
 // import { useEffect, useState } from "react";
-import skills from "../data/skill.json";
+import skills from "../data/Skill.json";
 const Skill = () => {
   // const [skill, setSkill] = useState([]);
 
