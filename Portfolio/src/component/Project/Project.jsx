@@ -1,5 +1,5 @@
 // import { useEffect, useState } from "react";
-import project from "../data/project.json";
+import project from "../data/Project.json";
 const Project = () => {
   // const [project, setProject] = useState([]);
 
