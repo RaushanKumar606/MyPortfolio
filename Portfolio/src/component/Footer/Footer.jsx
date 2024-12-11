@@ -3,7 +3,8 @@
 import './Footer.css'
 const Footer = () => {
   return (
-    <div className="container">
+    
+    <div className="container ">
      <div className="row p-5">
       <div className="col">
         <h2>Raushan Singh Portfolio</h2>
@@ -109,7 +110,19 @@ const Footer = () => {
 
 
       <hr />
-     <div className='item-align-center'><h6> Copyright © 2020 by @RaushanSingh | All Rights Reserved</h6></div>
+      <div 
+  className="item-align-center" 
+  style={{
+    display: 'flex', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    
+    textAlign: 'center'
+  }}
+>
+  <h6>Copyright © 2020 by @RaushanSingh | All Rights Reserved</h6>
+</div>
+
      </div>
     </div>
   );

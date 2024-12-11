@@ -1,0 +1,38 @@
+[
+  {
+    "key": 1,
+    "title": "Weather Cast",
+    "imageSrc": "Project/wether.jpg",
+    "description": "A web application that provides real-time weather updates using APIs, showcasing current conditions, forecasts, and more.",
+    "demo": "https://tiny-rugelach-d27a0d.netlify.app/"
+  },
+  {
+    "key": 2,
+    "title": "Share Market",
+    "imageSrc": "Project/market.jpg",
+    "description": "An application to track stock market trends, live updates, and performance analytics for smarter investment decisions.",
+    "demoLink": "https://www.example.com"
+  },
+  {
+    "key": 3,
+    "title": "TravelEase Stays",
+    "imageSrc": "Project/travels.jpg",
+    "description": "A smart home booking platform designed for travelers, offering seamless and tech-savvy accommodation experiences.",
+    "demo": "https://www.example.com"
+  },
+  {
+    "key": 4,
+    "title": "Open Library",
+    "imageSrc": "Project/library.jpg",
+    "description": "A project integrating the Open Library API to provide users access to a vast collection of books and authors.",
+    "demo": "https://www.example.com"
+  },
+  {
+    "key": 4,
+    "title": "Enjoy Delicious Food",
+    "imageSrc": "Project/download.jpg",
+    "description": "A project designed to provide users with access to a wide variety of restaurant menus, reviews, and online reservation features.",
+    "demo": "https://666d34c70c30bb9b5823694f--fancy-clafoutis-c8e33b.netlify.app/"
+  }
+  
+]

@@ -11,10 +11,10 @@ const About = () => {
           data-aos-easing="ease-in-sine"
         
         >
-            <div className="div"  style={{ border: "2px solid 001f3f",backgroundColor:"red",width:"300px"}}>
+            <div className="div"  style={{ border: "2px solid 001f3f",backgroundColor:"",width:"300px"}}>
             <div className="image">
             <img
-              src="/Image/rkr.jpg"
+              src="/Image/image.jpg"
               alt=""
               className="hover-image"
               style={{

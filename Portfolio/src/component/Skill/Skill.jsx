@@ -1,28 +1,28 @@
-import { useEffect, useState } from "react";
-
+// import { useEffect, useState } from "react";
+import skills from "../data/skill.json";
 const Skill = () => {
-  const [skill, setSkill] = useState([]);
+  // const [skill, setSkill] = useState([]);
 
-  useEffect(() => {
-    skills();
-  }, []);
+  // useEffect(() => {
+  //   skills();
+  // }, []);
 
-  const skills = async () => {
-    try {
-      const response = await fetch(`http://localhost:8000/api/Myskill`, {
-        method: "GET",
-      });
+  // const skills = async () => {
+  //   try {
+  //     const response = await fetch(`http://localhost:8000/api/Myskill`, {
+  //       method: "GET",
+  //     });
 
-      if (response.ok) {
-        const skillData = await response.json();
-        setSkill(skillData);
-      } else {
-        console.error("Error fetching skills:", response.statusText);
-      }
-    } catch (error) {
-      console.error("Failed to fetch skills:", error);
-    }
-  };
+  //     if (response.ok) {
+  //       const skillData = await response.json();
+  //       setSkill(skillData);
+  //     } else {
+  //       console.error("Error fetching skills:", response.statusText);
+  //     }
+  //   } catch (error) {
+  //     console.error("Failed to fetch skills:", error);
+  //   }
+  // };
 
   return (
     <div className="container" id="skill">
@@ -32,8 +32,8 @@ const Skill = () => {
         </h1>
       </div>
       <div className="row mt-4">
-        {skill.map((skill) => {
-          const { id, skillName } = skill;
+        {skills.map((skill) => {
+          const { id,  } = skill;
           return (
             <div
               key={id}
@@ -44,11 +44,11 @@ const Skill = () => {
             >
               <div className="card shadow-sm p-3 hover-card d-flex ">
                 <img
-                  src={skill.Icone}
+                  src={`${skill.imageSrc}`}
                   alt=""
                   style={{ width: "30px", height: "30px", marginRight: "10px" }}
                 />
-                <span className="card-title mb-0">{skillName}</span>
+                <span className="card-title mb-0">{skill.title}</span>
               </div>
             </div>
           );

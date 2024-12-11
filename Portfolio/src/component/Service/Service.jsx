@@ -1,26 +1,26 @@
-import { useEffect, useState } from "react";
-
+// import { useEffect, useState } from "react";
+import services from"../data/Service.json";
 
 const Service = () => {
-  const [services, setServices] = useState([])
+//   const [services, setServices] = useState([])
   
-useEffect(()=>{
-  myservice();
-});
+// useEffect(()=>{
+//   myservice();
+// });
 
-const myservice  = async()=>{
-  try {
-    const response = await fetch(`http://localhost:8000/api/service`,{
-      method:"GET",
-    })
-    if(response.ok){
-      const serviceData = await response.json();
-      setServices(serviceData);
-    }
-  } catch (error) {
-    console.log(error)
-  }
-}
+// const myservice  = async()=>{
+//   try {
+//     const response = await fetch(`http://localhost:8000/api/service`,{
+//       method:"GET",
+//     })
+//     if(response.ok){
+//       const serviceData = await response.json();
+//       setServices(serviceData);
+//     }
+//   } catch (error) {
+//     console.log(error)
+//   }
+// }
 
       
 

@@ -129,7 +129,7 @@ return()=>{
       data-aos-duration="1000"
           >
             <img
-              src="/Image/rkr.jpg"
+              src="/Image/image.jpg"
               alt=""
               className="hover-image"
               style={{

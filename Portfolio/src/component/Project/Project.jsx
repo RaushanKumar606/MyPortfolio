@@ -1,25 +1,25 @@
-import { useEffect, useState } from "react";
-
+// import { useEffect, useState } from "react";
+import project from "../data/project.json";
 const Project = () => {
-  const [project, setProject] = useState([]);
+  // const [project, setProject] = useState([]);
 
-  useEffect(() => {
-    myproject();
-  }, []);
+  // useEffect(() => {
+  //   myproject();
+  // }, []);
 
-  const myproject = async () => {
-    try {
-      const response = await fetch(`http://localhost:8000/api/Myproject`, {
-        method: "GET",
-      });
-      if (response.ok) {
-        const projectData = await response.json();
-        setProject(projectData);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const myproject = async () => {
+  //   try {
+  //     const response = await fetch(`http://localhost:8000/api/Myproject`, {
+  //       method: "GET",
+  //     });
+  //     if (response.ok) {
+  //       const projectData = await response.json();
+  //       setProject(projectData);
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   return (
     <div className="container" id="project">
@@ -43,7 +43,7 @@ const Project = () => {
             <div
               className="card shadow-sm p-3 hover-card"
               style={{
-                backgroundImage: `url(${project.Icone})`,
+                backgroundImage: `url(${project.imageSrc})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
@@ -55,7 +55,7 @@ const Project = () => {
                 <div className="row">
                   <div className="col d-flex justify-content-center">
                     <a
-                      href={project.demoLink}
+                      href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn btn-primary"

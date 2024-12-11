@@ -1,0 +1,35 @@
+[
+    {
+      "title": "HTML",
+      "imageSrc": "Skill/html.png"
+    },
+    {
+      "title": "CSS",
+      "imageSrc": "Skill/css.png"
+    },
+    {
+      "title": "JavaScript",
+      "imageSrc": "Skill/js.png"
+    },
+    {
+      "title": "Boostrap",
+      "imageSrc": "Skill/boostrap.png"
+    },{
+      "title": "SQL",
+      "imageSrc": "Skill/sql.png"
+    },
+    {
+      "title": "React",
+      "imageSrc": "Skill/react.png"
+    },
+    {
+      "title": "Node",
+      "imageSrc": "Skill/node.png"
+    },
+  
+   
+    {
+      "title": "Java",
+      "imageSrc": "Skill/java.png"
+    }
+  ]

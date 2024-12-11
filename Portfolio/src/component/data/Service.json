@@ -1,0 +1,25 @@
+[
+      {
+        "title": "Web Development",
+        "description": "Building responsive and high-performance websites using modern web technologies such as HTML, CSS, JavaScript, and frameworks like React and Node.js.",
+        "icon": "Service/.png"
+      },
+     
+      {
+        "title": "Backend Development",
+        "description": "Developing robust and secure server-side applications with technologies like Express, MongoDB, and REST APIs, ensuring seamless data flow and business logic.",
+        "icon": "Service/.png"
+      },
+      {
+        "title": "Mobile App Development",
+        "description": "Designing and creating cross-platform mobile applications that deliver a seamless user experience, using tools like React Native and Flutter.",
+         "icon": "Service/.png"
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "Crafting user-centric designs that enhance user experience through intuitive interfaces, wireframes, and prototypes.",
+         "icon": "Service/.png"
+      }
+    ]
+  
+  

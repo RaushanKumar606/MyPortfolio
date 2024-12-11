@@ -1,0 +1,22 @@
+[
+      {
+        "image": "Education/gtu.jpg",
+        "schoolName": "Gujarat Technological University",
+        "degree": "Bachelor's",
+        "field": "Computer Science"
+      },
+      {
+        "image": "Education/jp.jpg",
+        "schoolName": "Bihar School Examination Board ",
+        "degree": "High School+2",
+        "field": "Science (Physics, Chemistry, Math)"
+      },
+      {
+        "image": "Education/high.jpg",
+        "schoolName": "Bihar School Examination Board ",
+        "degree": "High School",
+        "field": ""
+      }
+    ]
+  
+  
