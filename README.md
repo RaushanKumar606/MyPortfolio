@@ -21,7 +21,7 @@ Welcome to my portfolio! Below, you'll find details about my education, work exp
 ### 1. Clone the Repo
 
 ```bash
-git clone [https://github.com/RaushanKumar606/MyProfile]
+git clone [https://github.com/RaushanKumar606/MyPortfolio.git]
 cd your-repo-name
 ````
 
